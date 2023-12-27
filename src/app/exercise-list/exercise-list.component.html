@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise List</title>
+</head>
+<body>
+    <h2>Exercises</h2>
+    <input class="search-input" type="text" placeholder="Search" [(ngModel)]="searchTerm">
+    <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Exercise Name</th>
+            <th>Action</th> <!-- Button Column -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exercise of exercises | search: searchTerm">
+            <td>{{ exercise.category }}</td>
+            <td>{{ exercise.exerciseName }}</td>
+            <td> <button (click)="onEntriesButtonClick(exercise)">Entries</button>  <button (click)="onEditButtonClick(exercise)">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>
