@@ -1,0 +1,17 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# MySQL base service
+# ----------------------------------------------------------------------------------------------------------------------
+
+services:
+    mysql:
+        container_name: gymapp-mysql
+        image: docker.io/library/mysql:8.2.0
+        pull_policy: if_not_present
+        env_file:
+            - ./mysql/default.env
+        ports:
+            - "127.0.0.1:3306:3306"
+        expose:
+            - "3306"
+        command: mysqld --skip-ssl --character_set_server=utf8mb4
+
