@@ -6,7 +6,7 @@
 <body>
     <h2>Exercises</h2>
     <input class="search-input" type="text" placeholder="Search" [(ngModel)]="searchTerm">
-    <table>
+    <table class="list-table">
         <thead>
           <tr>
             <th>Category</th>
@@ -18,7 +18,7 @@
           <tr *ngFor="let exercise of exercises | search: searchTerm">
             <td>{{ exercise.category }}</td>
             <td>{{ exercise.exerciseName }}</td>
-            <td> <button (click)="onEntriesButtonClick(exercise)">Entries</button>  <button (click)="onEditButtonClick(exercise)">Edit</button></td>
+            <td> <button class="list-button" (click)="onEntriesButtonClick(exercise)">Entries</button>  <button class="list-button" (click)="onEditButtonClick(exercise)">Edit</button></td>
           </tr>
         </tbody>
       </table>

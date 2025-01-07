@@ -5,7 +5,7 @@
 </head>
 <body>
     <h2>Entries for: {{ exercise.exerciseName }} </h2>
-    <table>
+    <table class="list-table">
         <thead>
           <tr>
             <th>Weights</th>
@@ -21,10 +21,10 @@
             <td>{{ entry.reps }}</td>
             <td>{{ entry.sets }}</td>
             <td>{{ entry.date | date: 'dd-MM-YYYY' }}</td>
-            <td> <button (click)="onEditButtonClick(entry.id)">Edit</button> <button (click)="onDeleteButtonClick(entry.id)">Delete</button></td>
+            <td> <button class="list-button" (click)="onEditButtonClick(entry.id)">Edit</button> <button class="list-button" (click)="onDeleteButtonClick(entry.id)">Delete</button></td>
           </tr>
         </tbody>
       </table>
 </body>
-<td> <button (click)="onAddButtonClick()">Add Entry</button> </td>
+<td> <button class="list-button" (click)="onAddButtonClick()">Add Entry</button> </td>
 </html>
