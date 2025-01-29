@@ -14,7 +14,7 @@ import { TrainingSessionsListComponent } from './training-sessions-list/training
 
 const routes: Routes = [
   { path: 'exercises', component: ExerciseListComponent },
-  { path: 'addexercise', component: CreateExerciseComponent },
+  { path: 'add-exercise', component: CreateExerciseComponent },
   { path: 'exercises/:id/entries', component: EntryListComponent },
   { path: 'exercises/:id/createEntry', component: CreateEntryComponent },
   { path: 'entries/:id/edit', component: EditEntryComponent },

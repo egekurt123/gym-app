@@ -1,11 +1,19 @@
 <nav>
-    <a [routerLink]="['/home']">Home</a>
-    <a [routerLink]="['/exercises']">Exercise List</a>
-    <a [routerLink]="['/addexercise']">Add Exercise</a>
-    <a [routerLink]="['/sessions']">Training sessions</a>
-    <a [routerLink]="['/contact']">Contact</a>
+  <div class="nav-container">
+    <div class="logo">
+      <span class="page-title">⚖️ My Gym Tracker</span>
+    </div>
+    <div class="nav-links">
+      <a [routerLink]="['/home']">Home</a>
+      <a [routerLink]="['/exercises']">Exercise List</a>
+      <a [routerLink]="['/add-exercise']">Add Exercise</a>
+      <a [routerLink]="['/sessions']">Training Sessions</a>
+      <a [routerLink]="['/contact']">Contact</a>
+    </div>
+  </div>
 </nav>
 
 <body>
-    <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 </body>
+
