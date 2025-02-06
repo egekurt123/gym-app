@@ -1,36 +1,89 @@
+.exercise-list-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
 
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+.exercise-list-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
 
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-  thead {
-    background-color: #283618;
-    color: #fff;
-  }
+.search-input {
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
 
-  th, td {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
 
-  tr {
-    border: 1px solid #A0A0A0;
-  }
+.list-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
 
-  th:hover {
-    background-color: #B7B7A4;
-  }
+.list-table thead {
+  background-color: var(--primary-color);
+  color: var(--header-text);
+}
 
-  .search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 70%;
-    margin-left: 2.5%;
-    /* Add more styles as needed */
-  }
+.list-table th {
+  padding: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.table-row {
+  transition: background-color 0.2s ease;
+}
+
+.list-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ececec;
+}
+
+.table-row:hover {
+  background-color: #f8f8f8;
+}
+
+.list-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--primary-color);
+  font-weight: 500;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.list-button:hover {
+  background-color: var(--accent-color);
+}

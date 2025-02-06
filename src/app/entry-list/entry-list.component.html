@@ -1,30 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Entry List for {{ exercise.exerciseName }}</title>
-</head>
-<body>
-    <h2>Entries for: {{ exercise.exerciseName }} </h2>
-    <table class="list-table">
-        <thead>
-          <tr>
-            <th>Weights</th>
-            <th>Reps</th>
-            <th>Sets</th>
-            <th>Date</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let entry of entries">
-            <td>{{ entry.weights }}</td>
-            <td>{{ entry.reps }}</td>
-            <td>{{ entry.sets }}</td>
-            <td>{{ entry.date | date: 'dd-MM-YYYY' }}</td>
-            <td> <button class="list-button" (click)="onEditButtonClick(entry.id)">Edit</button> <button class="list-button" (click)="onDeleteButtonClick(entry.id)">Delete</button></td>
-          </tr>
-        </tbody>
-      </table>
-</body>
-<td> <button class="list-button" (click)="onAddButtonClick()">Add Entry</button> </td>
-</html>
+<div class="entry-list-card">
+  <h2 class="entry-list-title">Entries for: {{ exercise.exerciseName }}</h2>
+
+  <table class="entry-table">
+    <thead>
+    <tr>
+      <th>Weights</th>
+      <th>Reps</th>
+      <th>Sets</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let entry of entries">
+      <td>{{ entry.weights }}</td>
+      <td>{{ entry.reps }}</td>
+      <td>{{ entry.sets }}</td>
+      <td>{{ entry.date | date: 'dd-MM-yyyy' }}</td>
+      <td>
+        <button class="action-button" (click)="onEditButtonClick(entry.id)">Edit</button>
+        <button class="action-button" (click)="onDeleteButtonClick(entry.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button class="action-button add-entry-btn" (click)="onAddButtonClick()">Add Entry</button>
+</div>
