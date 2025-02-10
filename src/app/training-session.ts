@@ -1,0 +1,17 @@
+import {Entry} from "./entry";
+
+export class TrainingSession {
+  date:Date;
+  entries:Entry[]
+  category:string;
+  exerciseCount?:number;
+  totalSets?:number;
+
+  constructor(date: Date, entries: Entry[], category:string) {
+    this.date = date;
+    this.entries = entries;
+    this.category = category;
+  }
+}
+
+
