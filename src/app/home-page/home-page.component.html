@@ -12,25 +12,25 @@
       <section class="feature-card">
         <h2>Exercise Management</h2>
         <p>View and manage your exercises in the 'Exercise List'. Edit details and track your progress with weights, sets, and reps for each session.</p>
-        <button class="action-button">View Exercises</button>
+A        <button class="action-button" [routerLink]="['/exercises']">View Exercises</button>
       </section>
 
       <section class="feature-card">
         <h2>Add New Exercises</h2>
         <p>Easily add new exercises to your routine. Customize and expand your workout plan to meet your fitness goals.</p>
-        <button class="action-button">Add Exercise</button>
+        <button class="action-button" [routerLink]="['/add-exercise']">Add Exercise</button>
       </section>
 
       <section class="feature-card">
         <h2>Training Sessions</h2>
         <p>Automatically track your workouts. View past sessions and monitor your progress over time without manual input.</p>
-        <button class="action-button">View Sessions</button>
+        <button class="action-button" [routerLink]="['/sessions']">View Sessions</button>
       </section>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2023 My Gym Tracker. All rights reserved.</p>
+    <p>&copy; 2023 Gym Tracker. All rights reserved.</p>
   </footer>
 </div>
 
