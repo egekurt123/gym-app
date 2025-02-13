@@ -4,6 +4,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Entry} from "../entry";
 import {HttpErrorResponse} from "@angular/common/http";
 import {TrainingSession} from "../training-session";
+import {ExerciseService} from "../exercise.service";
+import {Exercise} from "../exercise";
 
 @Component({
   selector: 'app-training-sessions-list',
@@ -12,7 +14,7 @@ import {TrainingSession} from "../training-session";
 })
 export class TrainingSessionsListComponent implements OnInit {
 
-  constructor(private entryService: EntryService, private route: ActivatedRoute, private router: Router) {
+  constructor(private entryService: EntryService, private exerciseService: ExerciseService , private route: ActivatedRoute, private router: Router) {
   }
 
   sessions: TrainingSession[] = [];
@@ -40,14 +42,14 @@ export class TrainingSessionsListComponent implements OnInit {
         if (session) {
           session.entries.push(a);
         } else {
-          this.sessions.push(new TrainingSession(a.date, [a], "TODO"));
+          this.sessions.push(new TrainingSession(a.date, [a]));
         }
       }
     )
     this.initializeAttributes();
   }
 
-  public initializeAttributes(): void {
+  private initializeAttributes(): void {
     this.sessions.map(session => {
       let sets = 0;
       let exercises = 0;
@@ -57,7 +59,25 @@ export class TrainingSessionsListComponent implements OnInit {
       })
       session.exerciseCount = exercises;
       session.totalSets = sets;
+      this.initializeCategory(session)
     })
   }
+
+  private initializeCategory(session: TrainingSession): void {
+
+    this.entryService.getCategoryofEntry(session.entries[0]).subscribe(
+      (response: Exercise) => {
+        session.category = response.category;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
+
+  onViewSession(session: TrainingSession) {
+    this.router.navigate(['/session-details'], { state: { session } });
+  }
+
 
 }

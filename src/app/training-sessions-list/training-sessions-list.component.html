@@ -18,7 +18,7 @@
       <td>{{ session.exerciseCount }}</td>
       <td>{{ session.totalSets }}</td>
       <td>
-        <button class="action-button" >View</button>
+        <button class="action-button" (click)="onViewSession(session)">View</button>
       </td>
     </tr>
     </tbody>

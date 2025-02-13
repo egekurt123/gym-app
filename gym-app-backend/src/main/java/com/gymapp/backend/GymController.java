@@ -44,6 +44,11 @@ public class GymController {
         return exerciseRepository.findById(Long.valueOf(id)).get();
     }
 
+    @GetMapping(path = "/entries/{id}/exercise")
+    public Exercise getExerciseofEntry(@PathVariable String id) {
+      return entryRepository.findExercise(id);
+    }
+
     @GetMapping(path = "/entries/{id}")
     public Entry getEntryWithId(@PathVariable String id) {
         return entryRepository.findById(Long.valueOf(id)).get();
@@ -66,7 +71,7 @@ public class GymController {
         updatedExercise.setExerciseName(updatedExercise.getExerciseName());
         updatedExercise.setCategory(updatedExercise.getCategory());
 
-        // TODO: if exercisename changes, change the belonging entries 
+        // TODO: if exercisename changes, change the belonging entries
 
 
         return exerciseRepository.save(exercise);

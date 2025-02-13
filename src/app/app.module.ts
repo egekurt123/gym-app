@@ -18,6 +18,7 @@ import { EditExerciseComponent } from './edit-exercise/edit-exercise.component';
 import { EditEntryComponent } from './edit-entry/edit-entry.component';
 import { TrainingSessionsListComponent } from './training-sessions-list/training-sessions-list.component';
 import { SearchPipe } from './search.pipe';
+import { TrainingSessionDetailsComponent } from './training-session-details/training-session-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SearchPipe } from './search.pipe';
     EditExerciseComponent,
     EditEntryComponent,
     TrainingSessionsListComponent,
-    SearchPipe
+    SearchPipe,
+    TrainingSessionDetailsComponent
   ],
   imports: [
     BrowserModule,

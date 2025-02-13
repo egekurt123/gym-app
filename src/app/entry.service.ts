@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Entry } from './entry';
+import {Exercise} from "./exercise";
 
 @Injectable({
   providedIn: 'root'
@@ -24,15 +25,19 @@ export class EntryService {
     return this.httpClient.get<Entry>(`${this.BASEURL}/entries/${entryId}`);
   }
 
-  public createEntry(entry: Entry): Observable<Entry> { 
+  public createEntry(entry: Entry): Observable<Entry> {
     return this.httpClient.post<Entry>(`${this.BASEURL}/entries`, entry);
   }
 
-  public updateEntry(entry: Entry): Observable<Entry> { 
+  public updateEntry(entry: Entry): Observable<Entry> {
     return this.httpClient.put<Entry>(`${this.BASEURL}/entries/${entry.id}` , entry);
   }
 
   public deleteEntry(entryId: string): Observable<any> {
     return this.httpClient.delete(`${this.BASEURL}/entries/${entryId}`);
+  }
+
+  public getCategoryofEntry(entry: Entry): Observable<Exercise> {
+    return this.httpClient.get<Exercise>(`${this.BASEURL}/entries/${entry.id}/exercise`);
   }
 }

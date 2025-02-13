@@ -1,0 +1,24 @@
+<div class="session-details-card">
+  <h2 class="session-details-title"> Training Session - {{ session?.date | date: 'dd-MM-yyyy' }}</h2>
+  <p class="session-category"><strong>Category:</strong> {{ session?.category }}</p>
+
+  <table class="session-entry-table">
+    <thead>
+    <tr>
+      <th>Exercise</th>
+      <th>Weights</th>
+      <th>Reps</th>
+      <th>Sets</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let entry of session?.entries">
+      <td>{{ entry.exercise }}</td>
+      <td>{{ entry.weights }}</td>
+      <td>{{ entry.reps }}</td>
+      <td>{{ entry.sets }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button class="action-button back-button" [routerLink]="['/sessions']" >Back</button>
+</div>

@@ -9,6 +9,7 @@ import { EditEntryComponent } from './edit-entry/edit-entry.component';
 import { EditExerciseComponent } from './edit-exercise/edit-exercise.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { TrainingSessionsListComponent } from './training-sessions-list/training-sessions-list.component';
+import {TrainingSessionDetailsComponent} from "./training-session-details/training-session-details.component";
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'entries/:id/edit', component: EditEntryComponent },
   { path: 'exercises/:id/edit', component: EditExerciseComponent },
   { path: 'sessions', component: TrainingSessionsListComponent },
+  { path: 'session-details', component: TrainingSessionDetailsComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'home', component: HomePageComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
