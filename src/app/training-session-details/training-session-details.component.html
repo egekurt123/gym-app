@@ -1,8 +1,8 @@
-<div class="session-details-card">
-  <h2 class="session-details-title"> Training Session - {{ session?.date | date: 'dd-MM-yyyy' }}</h2>
+<div class="list-container">
+  <h2 class="list-title"> Training Session - {{ session?.date | date: 'dd-MM-yyyy' }}</h2>
   <p class="session-category"><strong>Category:</strong> {{ session?.category }}</p>
 
-  <table class="session-entry-table">
+  <table class="list-table">
     <thead>
     <tr>
       <th>Exercise</th>
@@ -20,5 +20,5 @@
     </tr>
     </tbody>
   </table>
-  <button class="action-button back-button" [routerLink]="['/sessions']" >Back</button>
+  <button class="list-button" [routerLink]="['/sessions']" >Back</button>
 </div>

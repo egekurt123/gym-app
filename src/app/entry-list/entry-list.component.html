@@ -1,7 +1,7 @@
-<div class="entry-list-card">
-  <h2 class="entry-list-title">Entries for: {{ exercise.exerciseName }}</h2>
+<div class="list-container">
+  <h2 class="list-title">Entries for: {{ exercise.exerciseName }}</h2>
 
-  <table class="entry-table">
+  <table class="list-table">
     <thead>
     <tr>
       <th>Weights</th>
@@ -18,12 +18,12 @@
       <td>{{ entry.sets }}</td>
       <td>{{ entry.date | date: 'dd-MM-yyyy' }}</td>
       <td>
-        <button class="action-button" (click)="onEditButtonClick(entry.id)">Edit</button>
-        <button class="action-button" (click)="onDeleteButtonClick(entry.id)">Delete</button>
+        <button class="list-button" (click)="onEditButtonClick(entry.id)">Edit</button>
+        <button class="list-button" (click)="onDeleteButtonClick(entry.id)">Delete</button>
       </td>
     </tr>
     </tbody>
   </table>
 
-  <button class="action-button add-entry-btn" (click)="onAddButtonClick()">Add Entry</button>
+  <button class="list-button add-entry-btn" (click)="onAddButtonClick()">Add Entry</button>
 </div>
