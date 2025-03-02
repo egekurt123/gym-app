@@ -14,6 +14,8 @@
   --header-text: #FFFFFF;
 }
 
+/* list styles */
+
 .list-container {
   width: 100%;
   max-width: 1200px;
@@ -77,4 +79,60 @@
 .list-button:hover {
   background-color: var(--accent-color);
 }
+
+/* create-edit pages styles */
+.form-container {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  background-color: #fff;
+}
+
+.form-heading {
+  text-align: center;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-button {
+  background-color: #283618;
+  color: #fff;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 400px;
+  align-self: center;
+  font-size: 15px;
+}
+
+.form-button:hover {
+  background-color: #B7B7A4;
+}
+
 
