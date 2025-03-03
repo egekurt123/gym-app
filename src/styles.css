@@ -15,21 +15,20 @@
 }
 
 /* list styles */
-
 .list-container {
-  width: 100%;
+  width: 95%;
   max-width: 1200px;
-  margin: 0 auto 30px;
-  background-color: var(--background-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin: 0 30px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .list-title {
   font-family: 'Arial', sans-serif;
   font-size: 1.8rem;
-  margin-bottom: 15px;
+  margin-bottom: 0.5rem;
   color: #333;
 }
 
